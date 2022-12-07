@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJs</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+</head>
+<body>
+    <!-- thêm reactjs vào website -->
+    <!-- <h1>Add React to website</h1> -->
+
+    <!-- HỌC LÝ THUYẾT REACRDOM -->
+
+    <!-- 1. React.create.Element() -> React element
+    2. So sánh với document.createElment() ->DOM element
+    3. Thay đổi :id, classname, style,...
+    4. Thêm: text,  hmtl
+    5. làm bài tập index1 -->
+    <script>console.log(React.version)</script>
+
+
+    <script>
+
+        //Dom
+        const ulDom = document.createElement('ul')
+        ulDom.id = 'ul-id'
+        ulDom.style= 'color:red;font-size:30px'
+
+        const liDom1 = document.createElement('li')
+        liDom1.innerText = 'Javascript'
+        liDom1.id = 'li-1'
+
+        const liDom2 = document.createElement('li')
+        liDom2.innerText = 'Reactjs'
+
+        ulDom.appendChild(liDom1)
+        ulDom.appendChild(liDom2)
+
+        document.body.appendChild(ulDom)
+
+
+        //React
+        // const h1React = React.createElement('h1', {
+        //     title :'Hello',
+        //     className :'heading',
+
+        // },'Hello guys!')
+
+        const ulReact = React.createElement(
+            'ul',
+            {
+                id: 'ul-id',
+                style:'color:red;font-size:30px'
+            },
+            React.createElement('li', {
+                id:'li-1',
+            }, 'Javascript'),
+            React.createElement('li', null, 'React'),
+
+
+        )
+        console.log(ulReact);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactjs</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <!-- LÀM BÀI TẬP  -->
+  
+ <!-- bài1.     
+    <li>Javascript</li>
+    <li>Reactjs</li>
+     -->
+    
+    <!-- bài2. <h1 title="Hello"  class="heading">Hello guys!</h1> -->
+     <div id="root"></div>
+    <script>
+        // chữa bài tập 1
+        //react
+        const Reacjs1 = React.createElement('ul',
+        {
+            // id: 'ul-id',
+            // style:'color:red;font-size:30px'
+        },
+
+        React.createElement('li',
+        null, 'Javascript'),
+
+        React.createElement('li',null,'ReactJs')
+        )
+
+        
+        //get root element
+            const root = document.getElementById('root')
+
+            //Render UI
+
+            ReactDOM.render(Reacjs1, root)
+
+    </script>
+</body>
+</html>

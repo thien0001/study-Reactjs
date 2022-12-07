@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reacjs</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+    <!-- 1. Tại sao phải sử dụng ReactDom ?
+    2. Tại sao lại tách React-DOM ra ?
+    3. Render UI -->
+
+    <!-- CHỮA BÀI TẬP -->
+    <div id="root"></div>
+
+    <script>
+        // React 
+        const ReactJS1 = React.createElement(
+        'div',
+        {
+            className: 'post-item',
+        },
+        React.createElement('h2',
+        {
+            title:'Học Reactjs tại f8',
+        },'Học Reactjs'),
+
+        React.createElement('p',
+        null, 
+
+        'Học Reactjs từ cơ bản đến nâng cao')    ,
+            
+        )
+        // Get root element
+            const root = document.getElementById('root')
+
+            //React-DOM -> render UI
+            ReactDOM.render(ReactJS1, root)
+    </script>
+
+</body>
+</html>

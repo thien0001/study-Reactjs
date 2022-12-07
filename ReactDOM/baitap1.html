@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reactjs</title>
+    <!-- <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+</head>
+<body>
+
+    
+    <h1>Giải bài tập</h1>
+    <script>console.log(React.version)</script>
+    <!-- <div class="post-item">
+        <h2 title="học reatjs tại f8">Học Reactjs</h2>
+        <p>Học Reactjs từ cơ bản đến nâng cao</p>
+    </div> -->
+
+    <script>
+        //Dom
+        const DOM = document.createElement('div')
+        DOM.className ='post-item'
+           
+        const h2DOM = document.createElement('h2')
+        h2DOM.title ='Học Reactjs tại f8'
+        h2DOM.innerText = 'Học Reactjs'
+
+        const pDOM = document.createElement('p')
+        // h2DOM.title ='Học Reactjs tại f8'
+        pDOM.innerText = 'Học Reactjs từ cơ bản đến nâng cao'
+        
+        DOM.appendChild(h2DOM);
+        DOM.appendChild(pDOM);
+
+        document.body.appendChild(DOM);
+
+
+        //reactjs
+        const ReactJS1 = React.createElement(
+        'div',
+        {
+            className: 'post-item',
+        },
+        React.createElement('h2',
+        {
+            title:'Học Reactjs tại f8',
+        },'Học Reactjs'),
+
+        React.createElement('p',
+        null, 
+
+        'Học Reactjs từ cơ bản đến nâng cao')    ,
+            
+        )
+        console.log(ReactJS1);
+
+    </script>
+</body>
+</html>
